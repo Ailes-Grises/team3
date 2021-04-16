@@ -2,6 +2,8 @@ package tsuri_pkg;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+// fish_list が変化するため、確率が変わる様になっています
+
 public class Spot {
 
 	private HashMap<String, Integer> fish_hash = new HashMap<String, Integer>();

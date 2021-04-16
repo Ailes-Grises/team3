@@ -9,11 +9,11 @@ public class Main {
 		// Spot spot = new Spot();
 		Fisher fisher = new Fisher("池田さん");
 
-		System.out.println("どこで釣りますか? > ");
 		Scanner scan = new Scanner(System.in);
-		int select = scan.nextInt();
 
 		for(int i=0; i < 3; i++){
+			System.out.println("どこで釣りますか? > ");
+			int select = scan.nextInt();
 			fisher.fishing(spot[select]);
 			System.out.println(fisher.toString());
 		}
