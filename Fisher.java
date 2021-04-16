@@ -2,17 +2,10 @@ package tsuri_pkg;
 import java.util.*;
 
 public class Fisher {
-	/*
-	 * 釣った魚リスト
-	 *
-	 * func 合計ポイント
-	 * func 釣り(スポット)
-	 *
-	 */
 
 	private String name;
 	private int sum;
-	private ArrayList<String> fished_list;
+	private ArrayList<String> fished_list = new ArrayList<String>();
 
 	public Fisher(){
 		this.name = null;
@@ -30,7 +23,6 @@ public class Fisher {
 		int rand = (int)(Math.random()*7);
 		String [] fish = {"マグロ", "メダカ", "タコ", "長靴", "はまち", "ヒラメ", "スカ"};
 		// this.calc_sum(spot, fish[(int)Math.random()*7]);
-		// System.out.println(rand + "\n");
 		this.calc_sum(spot, fish[rand]);
 		this.toString();
 	}
