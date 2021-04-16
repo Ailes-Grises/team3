@@ -30,7 +30,7 @@ public class Fisher {
 		int rand = (int)Math.random()*7;
 		String [] fish = {"マグロ", "メダカ", "タコ", "長靴", "はまち", "ヒラメ", "スカ"};
 		// this.calc_sum(spot, fish[(int)Math.random()*7]);
-		System.out.println(rand + "\n");
+		// System.out.println(rand + "\n");
 		this.calc_sum(spot, fish[rand]);
 		this.toString();
 	}
