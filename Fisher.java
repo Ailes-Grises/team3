@@ -27,7 +27,7 @@ public class Fisher {
 		this.sum += spot.getPoint(fish_name);
 	}
 	public void fishing(Spot spot){
-		int rand = (int)Math.random()*7;
+		int rand = (int)(Math.random()*7);
 		String [] fish = {"マグロ", "メダカ", "タコ", "長靴", "はまち", "ヒラメ", "スカ"};
 		// this.calc_sum(spot, fish[(int)Math.random()*7]);
 		// System.out.println(rand + "\n");
