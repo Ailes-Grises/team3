@@ -2,16 +2,22 @@ package RPG;
 import java.util.*;
 
 public class Zenigame extends Pokemon{
+	private List<String> waza_list = new ArrayList<>();
 	public Zenigame(){
 		super("ゼニガメ", 80, 40, 40, 1);
-		// this.waza_map.put("バブルこうせん", 40);
-		// this.waza_map.put("みずでっぽう", 20);
-		// this.waza_map.put("冷凍ビーム", 80);
-		// this.waza_map.put("ぜったいれいど", 10000);
 		this.setWaza_map("バブルこうせん", 40);
 		this.setWaza_map("みずでっぽう", 20);
 		this.setWaza_map("れいとうビーム", 80);
 		this.setWaza_map("ぜったいれいど", 10000);
+		
+		this.waza_list.add("バブルこうせん");
+		this.waza_list.add("みずでっぽう");
+		this.waza_list.add("れいとうビーム");
+		this.waza_list.add("ぜったいれいど");
+	}
+
+	public String getWaza_list(int seq){
+		return this.waza_list.get(seq);
 	}
 
 	public void Attack(String waza_name, Pokemon enemy){

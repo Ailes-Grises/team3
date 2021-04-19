@@ -16,20 +16,24 @@ public class Main {
 		System.out.println("君のポケモンは" + hitokage.getName() + "だ");
 		while(true) {
 			System.out.println("技名を入力＞");
+			for(int i = 0; i < 4; i++) System.out.println(hitokage.getWaza_list(i));
+
 			String input = sc.nextLine();
 			// 自分の攻撃
 			hitokage.Attack(input, zenigame);
 
 			// 敵の攻撃
 			// あんまりよくないけどこうやって実装してみる
-			List<String> enemy_attack_list = new ArrayList<>();
-			enemy_attack_list.add("バブルこうせん");
-			enemy_attack_list.add("みずでっぽう");
-			enemy_attack_list.add("れいとうビーム");
-			enemy_attack_list.add("ぜったいれいど");
-			enemy_attack_list.get((int)(Math.random()*4.0));
+			// List<String> enemy_attack_list = new ArrayList<>();
+			// enemy_attack_list.add("バブルこうせん");
+			// enemy_attack_list.add("みずでっぽう");
+			// enemy_attack_list.add("れいとうビーム");
+			// enemy_attack_list.add("ぜったいれいど");
+
 			// 乱数で攻撃を選択
-			zenigame.Attack(enemy_attack_list.get((int)(Math.random()*4)), hitokage);
+			String waza = zenigame.getWaza_list((int)(Math.random()*4.0));
+			zenigame.Attack(waza, hitokage);
+			System.out.println(zenigame.getName()  + "の" + waza + "！");
 			if (hitokage.getHp()<=0) {
 				System.out.println(hitokage.getName() + "はたおれた！");
 				break;
